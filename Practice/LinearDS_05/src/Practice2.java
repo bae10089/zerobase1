@@ -16,7 +16,30 @@
 
 public class Practice2 {
     public static boolean checkPalindrome(LinkedList list) {
-        return false;
+        Node cur = list.head;
+        Node left=list.head;
+        Node right=null;
+
+        int cnt = 0;
+        while (cur!=null){
+            cnt++;
+            right=cur;
+            cur = cur.next;
+        }
+
+        Node prevRight = right;
+        for (int i = 0; i <cnt/2 ; i++) {
+            if(left.data!= right.data){
+                return false;
+            }
+            left=left.next;
+            right=left;
+            while (right.next!=prevRight){
+                right=right.next;
+            }
+
+        }
+        return true;
     }
 
     public static void main(String[] args) {

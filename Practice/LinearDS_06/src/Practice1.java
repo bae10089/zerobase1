@@ -10,8 +10,8 @@ class MyStack1 {
         this.list = new ArrayList();
     }
 
-//    public boolean isEmpty() {
-//    }
+    public boolean isEmpty() {
+    }
 //
 //    public void push(int data) {
 //    }

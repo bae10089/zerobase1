@@ -8,19 +8,31 @@
 // 입력: 1 3 5 7 9
 // 출력: 9 7 5 3 1
 
+
 import java.util.Stack;
 
 public class Practice1 {
-//    public static String reverseString(String str) {
-//
-//    }
+    public static String  reverseString(String str) {
+        StringBuffer sb = new StringBuffer();
+        Stack stack = new Stack();
+        for(String s: str.split("")){
+            stack.push(s);
+        }
+        for (int i = 0; i <stack.size() ; i++) {
+            sb.append(stack.pop());
+        }
+        String result = sb.toString();
+        return result;
+    }
+
+
 
     public static void main(String[] args) {
         // Test code
-//        String result = reverseString("Hello");
-//        System.out.println("result = " + result);
-//
-//        result = reverseString("1 3 5 7 9");
-//        System.out.println("result = " + result);
+        String result = reverseString("Hello");
+        System.out.println("result = " + result);
+
+        result = reverseString("1 3 5 7 9");
+        System.out.println("result = " + result);
     }
 }

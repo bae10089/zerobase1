@@ -2,7 +2,30 @@
 // 양방향 연결 리스트 (Doubly Linked List) 구현
 
 class NodeBi {
+    int data;
+    NodeBi next;
+    NodeBi prev;
 
+
+    NodeBi(int data,NodeBi next, NodeBi prev){
+        this.data = data;
+        this.next= next;
+        this.prev = prev;
+    }
+}
+
+class DoublyLinkedList extends LinkedList{
+    NodeBi head;
+    NodeBi tail;
+
+    DoublyLinkedList(NodeBi node){
+        this.head=node;
+        this.tail=node;
+    }
+
+    public boolean isEmpty(){
+        if(this.head==null)
+    }
 }
 
 
