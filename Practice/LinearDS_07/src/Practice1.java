@@ -15,13 +15,13 @@ public class Practice1 {
     public static String  reverseString(String str) {
         StringBuffer sb = new StringBuffer();
         Stack stack = new Stack();
+        String result = "";
         for(String s: str.split("")){
             stack.push(s);
         }
-        for (int i = 0; i <stack.size() ; i++) {
-            sb.append(stack.pop());
+        while (stack.size()!=0){
+            result=result+stack.pop();
         }
-        String result = sb.toString();
         return result;
     }
 
